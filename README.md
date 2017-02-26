@@ -321,7 +321,7 @@ The cleanup method in the VehicleTracker class removes stray vehicle candidates 
 
 Each candidate also has an "age" value that is initially set to zero. Once the age hits -50, the variable is locked, and the candidate is assumed to be valid vehicle detection and permanently tracked even if it is not seen for a few frames. The Kalman Filter estimates the velocity of the bounding box and predicts the position whenever the measurements are lacking. A permanently tracked vehicle is only deleted once it goes outside a certain region-of-interest (horizon). This helps maintain the tracking even when vehicles are obscured.
 
-The is decremented by one any time the candidate has at least one measurement assigned to it. Conversely, the age is increased if no measurements are assigned to a candidate in a frame (assuming it's age > -50). Once the age reaches 5, the candidate is considered a false positive and removed.
+The age is decremented by one any time the candidate has at least one measurement assigned to it. Conversely, the age is increased if no measurements are assigned to a candidate in a frame (assuming it's age > -50). Once the age reaches 5, the candidate is considered a false positive and removed.
 
 There is also a threshold on the age at which a candidate is drawn on the image. An orange bounding box indicates that the covariance estimated by the Kalman filter has increased beyond a certain limit. This happens when a vehicle candidate is obscured behind another and hasn't been detected for a few frames.
 
