@@ -158,9 +158,7 @@ t0=time.time()
 clf.fit(X_train, y_train)
 print('Linear SVC trained in', round(time.time()-t0, 2), 'sec')
 ```
-
-    Linear SVC trained in 4.49 sec
-
+   Linear SVC trained in 4.49 sec
 
 One round of hard negative mining was also used to enhance the results. This was done by making copies of images that were identified as false positives and adding them to the training data set. This improved the performance of the classifier. The model obtained test accuracy of 98.45% with the test-set of 20% from the total data was saved to `models/clf_9845.pkl` file.
 
@@ -185,11 +183,6 @@ joblib.dump({'model':clf, 'config':config}, 'models/clf_9845.pkl')
     Test accuracy of the classifier: 0.9845
     The classifier predicts: [ 0.  1.  1.  1.  0.  1.  0.  1.  1.  1.]
               for 10 labels: [ 0.  1.  1.  1.  1.  1.  0.  1.  1.  1.]
-
-
-
-
-
     ['models/clf_9845.pkl']
 
 
@@ -248,27 +241,7 @@ plt.show()
 
 ### Below is the video produced with the proposed pipeline.
 
-
-
-```python
-from IPython.display import YouTubeVideo
-YouTubeVideo('4QCv3TjEuuE')
-```
-
-
-
-
-
-        <iframe
-            width="400"
-            height="300"
-            src="https://www.youtube.com/embed/4QCv3TjEuuE"
-            frameborder="0"
-            allowfullscreen
-        ></iframe>
-        
-
-
+[![Project output video](http://img.youtube.com/vi/4QCv3TjEuuE/0.jpg)](http://www.youtube.com/watch?v=4QCv3TjEuuE "Output video")
 
 
 ```python
